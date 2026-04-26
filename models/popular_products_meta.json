@@ -1,0 +1,11 @@
+{
+  "top_n": 20,
+  "weight_map": {
+    "view": 1,
+    "wishlist": 2,
+    "cart": 3,
+    "purchase": 5
+  },
+  "total_products": 194,
+  "scoring": "weighted sum: view=1, wishlist=2, cart=3, purchase=5"
+}

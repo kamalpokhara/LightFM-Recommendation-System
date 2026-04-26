@@ -11,3 +11,5 @@ __pycache__/
 .vscode/
 
 *.log
+
+synthetic_interaction_for_recsys.py
