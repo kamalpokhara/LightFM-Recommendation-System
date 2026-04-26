@@ -2,18 +2,18 @@
 
 This repository contains the **Recommendation Engine** component of a comprehensive E-commerce ecosystem. This project, titled **"Smart Retention System,"** aims to increase customer lifetime value by combining churn analytics with high-precision product discovery.
 
-> **⚠️ Project Status:** In Development. This specific module handles the **RecSys** logic using LightFM. The full system involves a parallel **Churn Prediction model** and a **Django-based E-commerce frontend.**
+> **Project Status:** In Development. This specific module handles the **RecSys** logic using LightFM. The full system involves a parallel **Churn Prediction model** and a **Django-based E-commerce frontend.**
 
 ---
 
-## 🚀 The "Smart Retention" Strategy
-
+## The "Smart Retention" Strategy
 In a modern e-commerce environment, retention is driven by two pillars: identifying who is likely to leave (Churn) and showing them exactly what they want to buy (RecSys). This repository implements the discovery layer through two distinct sections:
 
 ### Section 1: "Our Popular Products" (Global)
 * **Target:** All visitors (including logged-out guests).
 * **Logic:** A non-ML weighted aggregation of the interactions table.
-* **Weighted Scoring:** * **Purchase:** × 5
+* **Weighted Scoring:** 
+    * **Purchase:** × 5
     * **Add to Cart:** × 3
     * **Wishlist:** × 2
     * **View:** × 1
@@ -27,7 +27,7 @@ In a modern e-commerce environment, retention is driven by two pillars: identify
 
 ---
 
-## 📊 Data Architecture & Mapping
+## Data Architecture & Mapping
 
 The recommendation matrices are constructed from three primary data streams:
 
@@ -39,7 +39,7 @@ The recommendation matrices are constructed from three primary data streams:
 
 ---
 
-## 🛠️ Technical Stack & Environment
+## Technical Stack & Environment
 
 This module is optimized for a Linux-based high-performance environment to support the heavy mathematical computations required by the LightFM C-extensions.
 
@@ -52,7 +52,7 @@ This module is optimized for a Linux-based high-performance environment to suppo
 
 ---
 
-## 🚧 Project Roadmap
+## Project Roadmap
 - [x] Environment Configuration (WSL2 + Python 3.10)
 - [x] Compilation of C-extensions (GCC/Build-Essential)
 - [x] Data Pre-processing & Sparse Matrix Logic
