@@ -20,7 +20,10 @@ products.columns = products.columns.str.lower().str.strip()
 interactions.columns = interactions.columns.str.lower().str.strip()
 
 interactions = interactions.rename(columns={"action": "event_type"})
-products["product_id"] = products["id"].astype(str)
+# products["product_id"] = products["id"].astype(str)
+# fix product_id to integer
+products["product_id"] = products["id"].astype(int)
+interactions["product_id"] = interactions["product_id"].astype(int)
 
 print(f"Interactions: {interactions.shape}")
 print(f"Products:     {products.shape}")

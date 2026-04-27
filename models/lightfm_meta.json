@@ -1,0 +1,30 @@
+{
+  "best_epoch": 11,
+  "no_components": 64,
+  "loss": "warp",
+  "learning_rate": 0.05,
+  "item_alpha": 1e-05,
+  "user_alpha": 1e-05,
+  "best_test_auc": 0.7685,
+  "train_auc": 0.8014,
+  "precision_at_10": 0.34375,
+  "recall_at_10": 0.34904854475690167,
+  "item_features": [
+    "category",
+    "brand",
+    "price_range",
+    "rating_band"
+  ],
+  "user_features": [
+    "gender",
+    "tenure_band",
+    "age_group",
+    "interests"
+  ],
+  "weight_map": {
+    "view": 1,
+    "wishlist": 2,
+    "cart": 3,
+    "purchase": 5
+  }
+}
