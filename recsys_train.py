@@ -238,7 +238,7 @@ model = LightFM(
     user_alpha = 1e-5,
     random_state = 42,
 )
-EPOCHS = 30
+EPOCHS = 15 # old 30
 PATIENCE = 5
 train_aucs = []
 test_aucs = []
@@ -442,8 +442,6 @@ meta = {
     "user_alpha":      1e-5,
     "best_test_auc":   round(float(best_test_auc), 4),
     "train_auc":       round(float(train_aucs[best_epoch-1]), 4),
-    # "precision_at_10": round(float(p_at_k), 4),
-    # "recall_at_10":    round(float(r_at_k), 4),
     "precision_at_10": float(p_at_k.item() if hasattr(p_at_k, 'item') else p_at_k),
     "recall_at_10":    float(r_at_k.item() if hasattr(r_at_k, 'item') else r_at_k),
     "item_features":   ["category", "brand", "price_range", "rating_band"],
