@@ -6,6 +6,6 @@
     "cart": 3,
     "purchase": 5
   },
-  "total_products": 199,
+  "total_products": 194,
   "scoring": "weighted sum: view=1, wishlist=2, cart=3, purchase=5"
 }

@@ -3,12 +3,12 @@ import numpy as np
 import joblib
 import json
  
-# 1 load prod
+# 1 load products
 
 print("Loading data", flush=True)
 
-interactions = pd.read_csv("data/raw/synthetic_interactions_recsys.csv")
-products = pd.read_csv("products.csv")
+interactions = pd.read_csv("interactions_export.csv")
+products = pd.read_csv("products_export.csv")
 
 print("first 5 products ")
 print(products.head(20)[[
@@ -68,7 +68,7 @@ print(popular.head(20)[[
     ]])
 
 # 4 save
-popular.to_csv("data/processed/popular_products.csv", index=False)
+popular.to_csv("popular_products.csv", index=False)
 top20_ids= popular.head(20)["product_id"].tolist()
 joblib.dump(top20_ids, "models/popular_products.pkl")
 
@@ -82,7 +82,7 @@ with open("models/popular_products_meta.json", "w") as f:
     json.dump(meta, f, indent=2)
 
 print("\nSaved:")
-print("  data/processed/popular_products.csv")
+print("  popular_products.csv")
 print("  models/popular_products.pkl")
 print("  models/popular_products_meta.json")
 
